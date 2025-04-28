@@ -11,7 +11,6 @@ final class MainViewController: UIViewController {
     
     private let welcomeText: WelcomeText
     
-    private let button: MainPageButton
     
     init() {
         self.backgroundImageView = BackgroundView()
@@ -21,8 +20,6 @@ final class MainViewController: UIViewController {
         self.scrollImageView = MainPageImageView(name: "horscroll")
         
         self.welcomeText = WelcomeText()
-        
-        self.button = MainPageButton()
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -73,19 +70,11 @@ private extension MainViewController {
     }
     
     private func setDelegates() {
-        button.mainPageButtonDelegate = self
         scrollImageView.delegate = self
     }
 }
 
-//MARK: - MainPageButtonDelegate
-
-extension MainViewController: MainPageButtonDelegate {
-    func mainPageButtonTapped() {
-        let vc = SchoolsPageViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
+//MARK: - MainPageImageViewDelegate
 
 extension MainViewController: MainPageImageViewDelegate {
     func didScrollImageTapped() {

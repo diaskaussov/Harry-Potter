@@ -67,8 +67,7 @@ private extension CustomCollectionViewCell {
             backgroundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             backgroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             backgroundImage.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
-//            studentImageView.topAnchor.constraint(equalTo: backgroundImage.safeAreaLayoutGuide.topAnchor),
+    
             studentImageView.centerYAnchor.constraint(equalTo: backgroundImage.centerYAnchor, constant: -8),
             studentImageView.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor),
             studentImageView.widthAnchor.constraint(equalTo: backgroundImage.widthAnchor, multiplier: 0.7),
@@ -80,7 +79,7 @@ private extension CustomCollectionViewCell {
             
             isStudentLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 2),
             isStudentLabel.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor),
-            isStudentLabel.widthAnchor.constraint(equalTo: backgroundImage.widthAnchor),
+            isStudentLabel.widthAnchor.constraint(equalTo: backgroundImage.widthAnchor)
         ])
     }
 }

@@ -26,7 +26,6 @@
 		B9DF2C472DBEE9F400FAA517 /* CellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */; };
 		B9E87B242DBD51DB00366263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E87B1E2DBD51DB00366263 /* Assets.xcassets */; };
 		B9E87B262DBD51DB00366263 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B122DBD51DB00366263 /* BackgroundView.swift */; };
-		B9E87B272DBD51DB00366263 /* MainPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B132DBD51DB00366263 /* MainPageButton.swift */; };
 		B9E87B282DBD51DB00366263 /* MainPageImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B142DBD51DB00366263 /* MainPageImageView.swift */; };
 		B9E87B292DBD51DB00366263 /* WelcomeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B152DBD51DB00366263 /* WelcomeText.swift */; };
 		B9E87B2A2DBD51DB00366263 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B172DBD51DB00366263 /* MainViewController.swift */; };
@@ -39,7 +38,6 @@
 		B9E87B342DBD64B400366263 /* IndividualSchoolImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B332DBD64AE00366263 /* IndividualSchoolImageView.swift */; };
 		B9E87B392DBD668500366263 /* SchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B382DBD668100366263 /* SchoolData.swift */; };
 		B9E87B3B2DBD67E800366263 /* SchoolNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B3A2DBD67DC00366263 /* SchoolNameLabel.swift */; };
-		B9E87B3F2DBD79FC00366263 /* StudentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B3E2DBD79E400366263 /* StudentsButton.swift */; };
 		B9E87B422DBD7CF500366263 /* CharactersPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B412DBD7CEE00366263 /* CharactersPageViewController.swift */; };
 		B9E87B442DBD7D7700366263 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B432DBD7D7500366263 /* Characters.swift */; };
 		B9E87B472DBD7FED00366263 /* CharactersNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B462DBD7FD000366263 /* CharactersNetworkingService.swift */; };
@@ -69,7 +67,6 @@
 		B9DF2C432DBEE8C200FAA517 /* CharachtersPageBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharachtersPageBackgroundView.swift; sourceTree = "<group>"; };
 		B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLabel.swift; sourceTree = "<group>"; };
 		B9E87B122DBD51DB00366263 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		B9E87B132DBD51DB00366263 /* MainPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageButton.swift; sourceTree = "<group>"; };
 		B9E87B142DBD51DB00366263 /* MainPageImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageImageView.swift; sourceTree = "<group>"; };
 		B9E87B152DBD51DB00366263 /* WelcomeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeText.swift; sourceTree = "<group>"; };
 		B9E87B172DBD51DB00366263 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		B9E87B332DBD64AE00366263 /* IndividualSchoolImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualSchoolImageView.swift; sourceTree = "<group>"; };
 		B9E87B382DBD668100366263 /* SchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolData.swift; sourceTree = "<group>"; };
 		B9E87B3A2DBD67DC00366263 /* SchoolNameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolNameLabel.swift; sourceTree = "<group>"; };
-		B9E87B3E2DBD79E400366263 /* StudentsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsButton.swift; sourceTree = "<group>"; };
 		B9E87B412DBD7CEE00366263 /* CharactersPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPageViewController.swift; sourceTree = "<group>"; };
 		B9E87B432DBD7D7500366263 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		B9E87B462DBD7FD000366263 /* CharactersNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersNetworkingService.swift; sourceTree = "<group>"; };
@@ -174,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				B9E87B122DBD51DB00366263 /* BackgroundView.swift */,
-				B9E87B132DBD51DB00366263 /* MainPageButton.swift */,
 				B9E87B142DBD51DB00366263 /* MainPageImageView.swift */,
 				B9E87B152DBD51DB00366263 /* WelcomeText.swift */,
 			);
@@ -232,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				B96645642DBE936100988F46 /* IndividualSchoolBackgroundView.swift */,
-				B9E87B3E2DBD79E400366263 /* StudentsButton.swift */,
 				B9E87B3A2DBD67DC00366263 /* SchoolNameLabel.swift */,
 				B9E87B332DBD64AE00366263 /* IndividualSchoolImageView.swift */,
 			);
@@ -369,11 +363,9 @@
 				B96645672DBE9CED00988F46 /* RollView.swift in Sources */,
 				B96645612DBE638100988F46 /* DescriptionLabel.swift in Sources */,
 				B9E87B262DBD51DB00366263 /* BackgroundView.swift in Sources */,
-				B9E87B272DBD51DB00366263 /* MainPageButton.swift in Sources */,
 				B9E87B422DBD7CF500366263 /* CharactersPageViewController.swift in Sources */,
 				B9E87B282DBD51DB00366263 /* MainPageImageView.swift in Sources */,
 				B96645632DBE8B5400988F46 /* SchoolsPageImageView.swift in Sources */,
-				B9E87B3F2DBD79FC00366263 /* StudentsButton.swift in Sources */,
 				B9E87B292DBD51DB00366263 /* WelcomeText.swift in Sources */,
 				B9E87B2A2DBD51DB00366263 /* MainViewController.swift in Sources */,
 				B9E87B492DBD803D00366263 /* CharactersPagePresenter.swift in Sources */,
