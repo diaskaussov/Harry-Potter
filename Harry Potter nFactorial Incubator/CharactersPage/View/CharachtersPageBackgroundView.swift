@@ -2,9 +2,12 @@
 import UIKit
 
 final class CharachtersPageBackgroundView: UIImageView {
-        
+    private enum Constants {
+        static let backgroundImageName: String = "bluredLibrary"
+    }
+    
     init() {
-        super.init(image: UIImage(named: "bluredLib") ?? UIImage())
+        super.init(image: UIImage(named: Constants.backgroundImageName) ?? UIImage())
         setupBackgroundProperties()
     }
     

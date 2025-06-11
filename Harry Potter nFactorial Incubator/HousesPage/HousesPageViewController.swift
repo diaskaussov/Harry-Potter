@@ -1,61 +1,37 @@
 
 import UIKit
 
-final class SchoolsPageViewController: UIViewController {
-    
-    private let rollView: RollView
-    
-    private let gryffindor: FlagButton
-    
-    private let hufflepuff: FlagButton
-    
-    private let ravenclaw: FlagButton
-    
-    private let slyzerin: FlagButton
-    
-    private let backgroundView: SchoolsPageImageView
-    
-    private let owlView: SchoolsPageImageView
-    
-    init() {
-        self.rollView = RollView()
-        
-        self.gryffindor = FlagButton(image: "g")
-        
-        self.hufflepuff = FlagButton(image: "h")
-        
-        self.ravenclaw = FlagButton(image: "r")
-        
-        self.slyzerin = FlagButton(image: "s")
-        
-        self.backgroundView = SchoolsPageImageView(name: "bluredLib")
-        
-        self.owlView = SchoolsPageImageView(name: "owl")
-        
-        super.init(nibName: nil, bundle: nil)
+final class HousesPageViewController: UIViewController {
+    private enum Constants {
+        static let backgroundColor: UIColor = .black
+        static let owlImageName: String = "owl"
+        static let bluredLibraryImageName: String = "bluredLibrary"
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    private let rollView = RollView()
+    private let gryffindor = FlagButton(houseType: .gryffindor)
+    private let hufflepuff = FlagButton(houseType: .hufflepuff)
+    private let ravenclaw = FlagButton(houseType: .ravenclaw)
+    private let slytherin = FlagButton(houseType: .slytherin)
+    private let backgroundView = HousePageImageView(name: Constants.bluredLibraryImageName)
+    private let owlView = HousePageImageView(name: Constants.owlImageName)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubviews()
+        setupSubviews()
         setupConstraints()
-        setDelegates()
+        configure()
     }
 }
 
 //MARK: - Setup View Controller
 
-private extension SchoolsPageViewController {
-    
-    private func addSubviews() {
+private extension HousesPageViewController {
+    private func setupSubviews() {
         view.addSubview(backgroundView)
         backgroundView.addSubview(owlView)
         backgroundView.addSubview(gryffindor)
-        backgroundView.addSubview(slyzerin)
+        backgroundView.addSubview(slytherin)
         backgroundView.addSubview(hufflepuff)
         backgroundView.addSubview(ravenclaw)
         backgroundView.addSubview(rollView)
@@ -73,10 +49,10 @@ private extension SchoolsPageViewController {
             gryffindor.topAnchor.constraint(equalTo: backgroundView.safeAreaLayoutGuide.topAnchor),
             gryffindor.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, multiplier: 0.2),
             
-            slyzerin.leadingAnchor.constraint(equalTo: backgroundView.centerXAnchor, constant: 5),
-            slyzerin.widthAnchor.constraint(equalTo: backgroundView.widthAnchor, multiplier: 0.4),
-            slyzerin.topAnchor.constraint(equalTo: backgroundView.safeAreaLayoutGuide.topAnchor),
-            slyzerin.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, multiplier: 0.2),
+            slytherin.leadingAnchor.constraint(equalTo: backgroundView.centerXAnchor, constant: 5),
+            slytherin.widthAnchor.constraint(equalTo: backgroundView.widthAnchor, multiplier: 0.4),
+            slytherin.topAnchor.constraint(equalTo: backgroundView.safeAreaLayoutGuide.topAnchor),
+            slytherin.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, multiplier: 0.2),
             
             hufflepuff.trailingAnchor.constraint(equalTo: backgroundView.centerXAnchor, constant: -5),
             hufflepuff.widthAnchor.constraint(equalTo: backgroundView.widthAnchor, multiplier: 0.4),
@@ -85,7 +61,7 @@ private extension SchoolsPageViewController {
             
             ravenclaw.leadingAnchor.constraint(equalTo: backgroundView.centerXAnchor, constant: 5),
             ravenclaw.widthAnchor.constraint(equalTo: backgroundView.widthAnchor, multiplier: 0.4),
-            ravenclaw.topAnchor.constraint(equalTo: slyzerin.bottomAnchor, constant: 10),
+            ravenclaw.topAnchor.constraint(equalTo: slytherin.bottomAnchor, constant: 10),
             ravenclaw.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, multiplier: 0.2),
             
             owlView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 5),
@@ -100,54 +76,25 @@ private extension SchoolsPageViewController {
         ])
     }
     
-    private func setDelegates() {
+    private func configure() {
+        view.backgroundColor = Constants.backgroundColor
         gryffindor.flagButtonDelegate = self
         hufflepuff.flagButtonDelegate = self
         ravenclaw.flagButtonDelegate = self
-        slyzerin.flagButtonDelegate = self
+        slytherin.flagButtonDelegate = self
     }
 }
 
 //MARK: - FlagButtonDelegate
 
-extension SchoolsPageViewController: FlagButtonDelegate {
-    func schoolButtonTapped(for sender: UIButton) {
-        var schoolImage: UIImage
-        
-        var schoolName: String
-        
-        var schoolColor: UIColor
-        
-        switch sender {
-            case slyzerin:
-                guard let image = UIImage(named: "s") else { return }
-                schoolImage = image
-                schoolName = "Slytherin"
-                schoolColor = .green
-            
-            case hufflepuff:
-                guard let image = UIImage(named: "h") else { return }
-                schoolImage = image
-                schoolName = "Hufflepuff"
-                schoolColor = .yellow
-            
-            case ravenclaw:
-                guard let image = UIImage(named: "r") else { return }
-                schoolImage = image
-                schoolName = "Ravenclaw"
-                schoolColor = .blue
-            
-            default:
-                guard let image = UIImage(named: "g") else { return }
-                schoolImage = image
-                schoolName = "Gryffindor"
-                schoolColor = .red
-        }
-        
-        let vc = IndividualSchoolViewController(
-            image: schoolImage,
-            text: schoolName,
-            color: schoolColor
+extension HousesPageViewController: FlagButtonDelegate {
+    func flagButtonTapped(for houseType: HouseType) {
+        let vc = SingleHousePageViewController(
+            house: HouseModel(
+                image: UIImage(named: houseType.rawValue) ?? UIImage(),
+                name: houseType.rawValue.capitalized,
+                color: houseType.color
+            )
         )
         navigationController?.pushViewController(vc, animated: true)
     }

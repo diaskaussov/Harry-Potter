@@ -1,10 +1,10 @@
 
 import UIKit
 
-final class SchoolsPageImageView: UIImageView {
+final class SingleHouseImageView: UIImageView {
     
-    init(name: String) {
-        super.init(image: UIImage(named: name) ?? UIImage())
+    init(image: UIImage) {
+        super.init(image: image)
         setupImageViewProperties()
     }
     
@@ -13,7 +13,7 @@ final class SchoolsPageImageView: UIImageView {
     }
     
     private func setupImageViewProperties() {
-        contentMode = .scaleAspectFill
+        contentMode = .scaleToFill
         isUserInteractionEnabled = true
         translatesAutoresizingMaskIntoConstraints = false
     }

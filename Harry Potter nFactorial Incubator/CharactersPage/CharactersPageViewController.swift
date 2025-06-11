@@ -3,15 +3,11 @@ import UIKit
 
 final class CharactersPageViewController: UIViewController {
     
-    private let houseColor: UIColor
-    
+    private let house: HouseModel
     private let presenter: CharactersPagePresenter
-    
-    private let charactersSearchBar: CharactersSearchBar
-    
-    private let backgroundView: CharachtersPageBackgroundView
-    
-    private let charactersCollectionView: CharactersCollectionView
+    private let charactersSearchBar = CharactersSearchBar()
+    private let backgroundView = CharachtersPageBackgroundView()
+    private let charactersCollectionView = CharactersCollectionView()
     
     private let activityIndicator : UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
@@ -20,18 +16,9 @@ final class CharactersPageViewController: UIViewController {
         return indicator
     }()
     
-    init(schoolName: String, schoolColor: UIColor) {
-        
-        self.houseColor = schoolColor
-        
-        self.presenter = CharactersPagePresenter(houseName: schoolName)
-        
-        self.charactersSearchBar = CharactersSearchBar()
-        
-        self.backgroundView = CharachtersPageBackgroundView()
-        
-        self.charactersCollectionView = CharactersCollectionView()
-        
+    init(house: HouseModel) {
+        self.house = house
+        self.presenter = CharactersPagePresenter(house: house)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -41,18 +28,17 @@ final class CharactersPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubviews()
+        setupSubviews()
         setupConstraints()
-        setDelegates()
-        startDownloading()
-        configureGesture()
+        configure()
+        showActivityIndicator()
     }
 }
 
 //MARK: - Setup View Controller
 
 private extension CharactersPageViewController {
-    private func addSubviews() {
+    private func setupSubviews() {
         view.addSubview(activityIndicator)
         view.addSubview(backgroundView)
         backgroundView.addSubview(charactersCollectionView)
@@ -81,15 +67,16 @@ private extension CharactersPageViewController {
         ])
     }
     
-    private func setDelegates() {
+    private func configure() {
         charactersCollectionView.delegate = self
         charactersCollectionView.dataSource = self
         presenter.charactersPagePresenterDelegate = self
         charactersSearchBar.delegate = self
+        configureGesture()
     }
     
-    private func startDownloading() {
-        view.backgroundColor = houseColor
+    private func showActivityIndicator() {
+        view.backgroundColor = house.color
         activityIndicator.startAnimating()
         charactersCollectionView.isHidden = true
         charactersSearchBar.isHidden = true
@@ -112,7 +99,7 @@ private extension CharactersPageViewController {
 
 extension CharactersPageViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.getNumberOfCharacters()
+        return presenter.numberOfCharactersInHouse
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -122,23 +109,22 @@ extension CharactersPageViewController: UICollectionViewDataSource, UICollection
         ) as! CustomCollectionViewCell
         
         cell.configure(
-            name: presenter.getName(for: indexPath.row),
-            image: presenter.getImage(for: indexPath.row),
-            isStudent: presenter.getPosition(for: indexPath.row),
-            houseLetter: presenter.getFirstLetter()
+            name: presenter.getCharacterName(for: indexPath.row),
+            image: presenter.getCharacterImage(for: indexPath.row),
+            isStudent: presenter.getCharacterRole(for: indexPath.row),
+            houseName: presenter.getHouseName()
         )
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCharacter = presenter.getIndividualCharacter(for: indexPath.row)
+        let selectedCharacter = presenter.getCharacterInfo(for: indexPath.row)
         
         let vc = SingleCharacterViewController(
             character: selectedCharacter,
-            firstLetter: presenter.getFirstLetter()
+            firstLetter: presenter.getHouseName()
         )
-        
         navigationController?.present(vc, animated: true)
     }
 }

@@ -1,21 +1,21 @@
 
 import UIKit
 
-final class BackgroundView: UIImageView {
+final class SingleHouseBackgroundView: UIImageView {
     private enum Constants {
-        static let backgroundImage = "brickWall"
+        static let backgroundImageName: String = "bluredLibrary"
     }
     
     init() {
-        super.init(image: UIImage(named: Constants.backgroundImage) ?? UIImage())
-        setupViewProperties()
+        super.init(image: UIImage(named: Constants.backgroundImageName) ?? UIImage())
+        setupBackgroundImage()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViewProperties() {
+    private func setupBackgroundImage() {
         contentMode = .scaleAspectFill
         isUserInteractionEnabled = true
         translatesAutoresizingMaskIntoConstraints = false

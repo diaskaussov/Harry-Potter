@@ -1,8 +1,8 @@
 
 import UIKit
 
-struct SchoolData: Hashable, Equatable {
-    let schoolInfo = [
+struct HouseDescription: Hashable, Equatable {
+    let houseInfo = [
         "Gryffindor" : "Founded by an English wizard Godric Gryffindor in the 10th century, the Gryffindor House invites the one who possesses courage, chivalry, nerve, and determination. The lion represents loyalty. Want to see those brave lions? Click right here!",
         
         "Slytherin" : "Founded by Salazar Slytherin with an unknown nationality, the Slytherin House favours students who are cunning, resourceful and ambitious. They are like cold-blooded snakes — they can deceive you to achieve what they want. Oh, they are hidden behind this script… Click it to reveal.",

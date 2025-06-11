@@ -6,33 +6,72 @@ protocol CharactersPagePresenterDelegate: AnyObject {
 }
 
 final class CharactersPagePresenter {
-    
     weak var charactersPagePresenterDelegate: CharactersPagePresenterDelegate?
-
-    private let house: String
     
+    private let house: HouseModel
     private let charactersNetworkingService: CharactersNetworkingService
     
     private var charactersOfHouse: [IndividualCharacterInfo] = []
-    
     private var filteredCharacters: [IndividualCharacterInfo] = []
-    
     private var isSearching = false
     
-    init(houseName: String) {
-        self.house = houseName
-        
+    var numberOfCharactersInHouse: Int {
+        return isSearching ? filteredCharacters.count : charactersOfHouse.count
+    }
+    
+    init(house: HouseModel) {
+        self.house = house
         self.charactersNetworkingService = CharactersNetworkingService()
+        downloadData()
+    }
+}
+
+//MARK: - Getters
+
+extension CharactersPagePresenter {
+    func getHouseName() -> String {
+        return house.name
+    }
+    
+    func getCharacterName(for index: Int) -> String {
+        let character = isSearching ? filteredCharacters[index] : charactersOfHouse[index]
+        guard let name = character.name else { return "" }
+        return name
+    }
+    
+    func getCharacterImage(for index: Int) -> UIImage? {
+        let character = isSearching ? filteredCharacters[index] : charactersOfHouse[index]
+        return character.image
+    }
+    
+    func getCharacterRole(for index: Int) -> String {
+        let character = isSearching ? filteredCharacters[index] : charactersOfHouse[index]
         
-        makeApiCall()
+        if let isStudent = character.hogwartsStudent {
+            if isStudent {
+                return "student"
+            }
+        }
+        
+        if let isStaff = character.hogwartsStaff {
+            if isStaff {
+                return "staff"
+            }
+        }
+        
+        return "not student/staff"
+    }
+    
+    func getCharacterInfo(for index: Int) -> IndividualCharacterInfo {
+        return isSearching ? filteredCharacters[index] : charactersOfHouse[index]
     }
 }
 
 //MARK: - Api Calls
 
 private extension CharactersPagePresenter {
-    private func makeApiCall() {
-        charactersNetworkingService.fetchCharactersForHouse(house) { [weak self] result in
+    private func downloadData() {
+        charactersNetworkingService.fetchCharactersForHouse(house.name) { [weak self] result in
             
             guard let self = self else { return }
             
@@ -69,51 +108,5 @@ extension CharactersPagePresenter {
                 return name.lowercased().hasPrefix(searchText.lowercased())
             }
         }
-    }
-}
-
-//MARK: - Getters
-
-extension CharactersPagePresenter {
-    func getNumberOfCharacters() -> Int {
-        return isSearching ? filteredCharacters.count : charactersOfHouse.count
-    }
-    
-    func getFirstLetter() -> String {
-        guard let char = house.first?.lowercased() else { return "g" }
-        return char
-    }
-    
-    func getName(for index: Int) -> String {
-        let character = isSearching ? filteredCharacters[index] : charactersOfHouse[index]
-        guard let name = character.name else { return "" }
-        return name
-    }
-    
-    func getImage(for index: Int) -> UIImage? {
-        let character = isSearching ? filteredCharacters[index] : charactersOfHouse[index]
-        return character.image
-    }
-    
-    func getPosition(for index: Int) -> String {
-        let character = isSearching ? filteredCharacters[index] : charactersOfHouse[index]
-        
-        if let isStudent = character.hogwartsStudent {
-            if isStudent {
-                return "student"
-            }
-        }
-        
-        if let isStaff = character.hogwartsStaff {
-            if isStaff {
-                return "staff"
-            }
-        }
-        
-        return "not student/staff"
-    }
-    
-    func getIndividualCharacter(for index: Int) -> IndividualCharacterInfo {
-        return isSearching ? filteredCharacters[index] : charactersOfHouse[index]
     }
 }

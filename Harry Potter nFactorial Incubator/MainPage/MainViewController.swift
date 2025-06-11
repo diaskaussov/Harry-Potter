@@ -2,48 +2,33 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-    
-    private let backgroundImageView: BackgroundView
-    
-    private let platformImageView: MainPageImageView
-    
-    private let scrollImageView: MainPageImageView
-    
-    private let welcomeText: WelcomeText
-    
-    
-    init() {
-        self.backgroundImageView = BackgroundView()
-        
-        self.platformImageView = MainPageImageView(name: "platform2")
-        
-        self.scrollImageView = MainPageImageView(name: "horscroll")
-        
-        self.welcomeText = WelcomeText()
-        
-        super.init(nibName: nil, bundle: nil)
+    private enum Constants {
+        static let backgroundColor: UIColor = .black
+        static let platformImageName: String = "platform"
+        static let horizontalScrollImageName: String = "horizontalScroll"
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    private let backgroundImageView = BackgroundView()
+    private let platformImageView = MainPageImageView(name: Constants.platformImageName)
+    private let horizontalScrollImageView = MainPageImageView(name: Constants.horizontalScrollImageName)
+    private let welcomeText = WelcomeTextLabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubview()
+        setupSubviews()
         setupConstraints()
-        setDelegates()
+        configure()
     }
 }
 
 //MARK: - Setup View Controller
 
 private extension MainViewController {
-    private func addSubview() {
+    private func setupSubviews() {
         view.addSubview(backgroundImageView)
         backgroundImageView.addSubview(platformImageView)
-        backgroundImageView.addSubview(scrollImageView)
-        scrollImageView.addSubview(welcomeText)
+        backgroundImageView.addSubview(horizontalScrollImageView)
+        horizontalScrollImageView.addSubview(welcomeText)
     }
     
     private func setupConstraints() {
@@ -58,27 +43,28 @@ private extension MainViewController {
             platformImageView.heightAnchor.constraint(equalTo: backgroundImageView.heightAnchor, multiplier: 0.2),
             platformImageView.centerXAnchor.constraint(equalTo: backgroundImageView.centerXAnchor),
             
-            scrollImageView.centerXAnchor.constraint(equalTo: backgroundImageView.centerXAnchor),
-            scrollImageView.centerYAnchor.constraint(equalTo: backgroundImageView.centerYAnchor, constant: 50),
-            scrollImageView.widthAnchor.constraint(equalTo: backgroundImageView.widthAnchor, multiplier: 0.8),
-            scrollImageView.heightAnchor.constraint(equalTo: backgroundImageView.heightAnchor, multiplier: 0.35),
+            horizontalScrollImageView.centerXAnchor.constraint(equalTo: backgroundImageView.centerXAnchor),
+            horizontalScrollImageView.centerYAnchor.constraint(equalTo: backgroundImageView.centerYAnchor, constant: 50),
+            horizontalScrollImageView.widthAnchor.constraint(equalTo: backgroundImageView.widthAnchor, multiplier: 0.8),
+            horizontalScrollImageView.heightAnchor.constraint(equalTo: backgroundImageView.heightAnchor, multiplier: 0.35),
             
-            welcomeText.centerYAnchor.constraint(equalTo: scrollImageView.centerYAnchor),
-            welcomeText.centerXAnchor.constraint(equalTo: scrollImageView.centerXAnchor),
-            welcomeText.widthAnchor.constraint(equalTo: scrollImageView.widthAnchor, multiplier: 0.9)
+            welcomeText.centerYAnchor.constraint(equalTo: horizontalScrollImageView.centerYAnchor),
+            welcomeText.centerXAnchor.constraint(equalTo: horizontalScrollImageView.centerXAnchor),
+            welcomeText.widthAnchor.constraint(equalTo: horizontalScrollImageView.widthAnchor, multiplier: 0.9)
         ])
     }
     
-    private func setDelegates() {
-        scrollImageView.delegate = self
+    private func configure() {
+        view.backgroundColor = Constants.backgroundColor
+        horizontalScrollImageView.isUserInteractionEnabled = true
+        horizontalScrollImageView.addGestureRecognizer(
+            UITapGestureRecognizer(target: self, action: #selector(horizontalScrollImageViewTapped))
+        )
     }
-}
-
-//MARK: - MainPageImageViewDelegate
-
-extension MainViewController: MainPageImageViewDelegate {
-    func didScrollImageTapped() {
-        let vc = SchoolsPageViewController()
+    
+    @objc
+    private func horizontalScrollImageViewTapped() {
+        let vc = HousesPageViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

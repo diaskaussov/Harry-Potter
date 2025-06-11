@@ -4,26 +4,22 @@ import UIKit
 final class SingleCharacterPresenter {
     
     private let singleCharacter: IndividualCharacterInfo
-    
-    private let firstLetter: String
-    
-    private let characterInfoMap: [CharacterInfoType: String]
+    private let house: HouseModel
+    private let characterInfoType: [CharacterInfoType: String]
 
     
-    init(character: IndividualCharacterInfo, firstLetter: String) {
+    init(character: IndividualCharacterInfo, house: HouseModel) {
         self.singleCharacter = character
-        
-        self.firstLetter = firstLetter
-        
-        self.characterInfoMap = CharacterInfoFormatter.makeCharacterInfoMap(from: character)
+        self.house = house
+        self.characterInfoType = CharacterInfoFormatter.makeCharacterInfoMap(from: character)
     }
     
-    func getImage() -> UIImage {
-        return singleCharacter.image ?? UIImage(named: firstLetter) ?? UIImage()
+    var characterImage: UIImage {
+        return singleCharacter.image ?? UIImage(named: house.name.lowercased()) ?? UIImage()
     }
     
     func getInfo(for type: CharacterInfoType) -> String {
-        return characterInfoMap[type] ?? "unknown"
+        return characterInfoType[type] ?? "unknown"
     }
     
     func getAllInfoTypes() -> [CharacterInfoType] {

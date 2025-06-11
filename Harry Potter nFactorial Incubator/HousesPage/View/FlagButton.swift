@@ -2,20 +2,18 @@
 import UIKit
 
 protocol FlagButtonDelegate: AnyObject {
-    func schoolButtonTapped(for sender: UIButton)
+    func flagButtonTapped(for houseType: HouseType)
 }
 
 final class FlagButton: UIButton {
-    
     weak var flagButtonDelegate: FlagButtonDelegate?
     
-    private let image: String
+    private let houseType: HouseType
     
-    init(image: String) {
-        self.image = image
-        
+    init(houseType: HouseType) {
+        self.houseType = houseType
         super.init(frame: .zero)
-        setupButtonConstraints(image: image)
+        setupButtonConstraints(image: houseType.rawValue)
     }
     
     required init?(coder: NSCoder) {
@@ -32,6 +30,6 @@ final class FlagButton: UIButton {
     
     @objc
     private func buttonTapped(_ sender: UIButton) {
-        flagButtonDelegate?.schoolButtonTapped(for: sender)
+        flagButtonDelegate?.flagButtonTapped(for: houseType)
     }
 }

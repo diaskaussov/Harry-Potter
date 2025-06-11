@@ -21,10 +21,10 @@ final class SingleCharacterViewController: UIViewController {
     
     private var infoLabels: [CharacterInfoType: DescriptionLabel] = [:]
     
-    init(character: IndividualCharacterInfo, firstLetter: String) {
+    init(character: IndividualCharacterInfo, house: HouseModel) {
         self.presenter = SingleCharacterPresenter(
             character: character,
-            firstLetter: firstLetter
+            house: house
         )
         
         self.profileImageView = CharacterProfileImageView(

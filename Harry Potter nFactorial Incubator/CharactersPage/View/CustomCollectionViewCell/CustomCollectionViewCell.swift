@@ -5,9 +5,9 @@ final class CustomCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "CustomCollectionViewCell"
     
-    private let nameLabel: CellLabel
+    private let nameLabel = CellLabel()
     
-    private let isStudentLabel: CellLabel
+    private let isStudentLabel = CellLabel()
     
     private let backgroundImage: UIImageView = {
         let image = UIImageView(image: UIImage(named: "paper") ?? UIImage())
@@ -23,10 +23,6 @@ final class CustomCollectionViewCell: UICollectionViewCell {
     }()
     
     override init(frame: CGRect) {
-        self.nameLabel = CellLabel()
-        
-        self.isStudentLabel = CellLabel()
-        
         super.init(frame: frame)
         addSubviews()
         setupConstraints()
@@ -40,14 +36,14 @@ final class CustomCollectionViewCell: UICollectionViewCell {
         name: String?,
         image: UIImage?,
         isStudent: String,
-        houseLetter: String
+        houseName: String
     ) {
         nameLabel.text = name ?? "Unknown"
         nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         
         isStudentLabel.text = isStudent
         
-        studentImageView.image = image ?? UIImage(named: houseLetter) ?? UIImage()
+        studentImageView.image = image ?? UIImage(named: houseName.lowercased()) ?? UIImage()
     }
 }
 
