@@ -95,10 +95,10 @@ App uses 5 main screens:
   - Loading indicator shown while fetching data
 
 <p align="middle">
+<img src="https://github.com/user-attachments/assets/71e74509-b712-4f55-9570-d37bc8731328" width="191.17" height="400" />
 <img src="https://github.com/user-attachments/assets/35bfdbe6-52ef-45d4-b3ec-eeb1e5743631" width="191.17" height="400" />
 <img src="https://github.com/user-attachments/assets/8ddcc411-2dc2-4d00-9d49-115f50c88267" width="191.17" height="400" />
 <img src="https://github.com/user-attachments/assets/897bc5ba-f70e-4e41-a805-50f1684ec20c" width="191.17" height="400" />
-<!-- <img src="https://github.com/user-attachments/assets/999f0ba2-c2b3-4361-9dc8-122bd4082a60" width="191.17" height="400" /> -->
 <!-- <img src="https://github.com/user-attachments/assets/10bf0256-6190-4cbd-8ed4-bed578059ba2" width="191.17" height="400" /> -->
 
 ## Screen 6 - Character Details
