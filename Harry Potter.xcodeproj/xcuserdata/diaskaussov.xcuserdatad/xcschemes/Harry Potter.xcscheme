@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B92340E42DBA6163008A8810"
-               BuildableName = "Harry Potter nFactorial Incubator.app"
-               BlueprintName = "Harry Potter nFactorial Incubator"
-               ReferencedContainer = "container:Harry Potter nFactorial Incubator.xcodeproj">
+               BuildableName = "Harry Potter.app"
+               BlueprintName = "Harry Potter"
+               ReferencedContainer = "container:Harry Potter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B92340E42DBA6163008A8810"
-            BuildableName = "Harry Potter nFactorial Incubator.app"
-            BlueprintName = "Harry Potter nFactorial Incubator"
-            ReferencedContainer = "container:Harry Potter nFactorial Incubator.xcodeproj">
+            BuildableName = "Harry Potter.app"
+            BlueprintName = "Harry Potter"
+            ReferencedContainer = "container:Harry Potter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B92340E42DBA6163008A8810"
-            BuildableName = "Harry Potter nFactorial Incubator.app"
-            BlueprintName = "Harry Potter nFactorial Incubator"
-            ReferencedContainer = "container:Harry Potter nFactorial Incubator.xcodeproj">
+            BuildableName = "Harry Potter.app"
+            BlueprintName = "Harry Potter"
+            ReferencedContainer = "container:Harry Potter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

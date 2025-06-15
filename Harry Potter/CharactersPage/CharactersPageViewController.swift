@@ -13,6 +13,7 @@ final class CharactersPageViewController: UIViewController {
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.hidesWhenStopped = true
         indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.color = .white
         return indicator
     }()
     
