@@ -2,25 +2,17 @@
 import UIKit
 
 final class CustomCollectionViewCell: UICollectionViewCell {
+    private enum Constants {
+        static let defaultText: String = "Unknown"
+        static let nameTextFont = UIFont.systemFont(ofSize: 16, weight: .bold)
+    }
     
     static let identifier = "CustomCollectionViewCell"
     
     private let nameLabel = CellLabel()
-    
     private let isStudentLabel = CellLabel()
-    
-    private let backgroundImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "paper") ?? UIImage())
-        image.contentMode = .scaleAspectFit
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
-    }()
-    
-    private let studentImageView: UIImageView = {
-        let image = UIImageView(image: UIImage())
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
-    }()
+    private let studentImageView = CharacterImageView()
+    private let backgroundImage = BackgroundImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,14 +27,12 @@ final class CustomCollectionViewCell: UICollectionViewCell {
     func configure(
         name: String?,
         image: UIImage?,
-        isStudent: String,
+        isStudent: String?,
         houseName: String
     ) {
-        nameLabel.text = name ?? "Unknown"
-        nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        
-        isStudentLabel.text = isStudent
-        
+        nameLabel.text = name ?? Constants.defaultText
+        nameLabel.font = Constants.nameTextFont
+        isStudentLabel.text = isStudent ?? Constants.defaultText
         studentImageView.image = image ?? UIImage(named: houseName.lowercased()) ?? UIImage()
     }
 }

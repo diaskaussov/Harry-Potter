@@ -2,8 +2,23 @@
 import UIKit
 
 final class DescriptionLabel: UILabel {
-    
-    private let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    private enum Constants {
+        static let numberOfLines: Int = 0
+        static let textColor: UIColor = UIColor(
+            red: 134.0/255.0,
+            green: 59.0/255.0,
+            blue: 5.0/255.0,
+            alpha: 1
+        )
+        static let typeTextFont = UIFont.systemFont(
+            ofSize: 16,
+            weight: .bold
+        )
+        static let descriptionTextFont = UIFont.systemFont(
+            ofSize: 16,
+            weight: .regular
+        )
+    }
     
     init(type: String, content: String) {
         super.init(frame: .zero)
@@ -15,49 +30,27 @@ final class DescriptionLabel: UILabel {
     }
     
     private func setupLabelProperties(type: String, content: String) {
-//        text = type + content
-        numberOfLines = 0
-        textAlignment = .left
-        font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        layer.cornerRadius = 10
-        layer.masksToBounds = true
+        textColor = Constants.textColor
+        numberOfLines = Constants.numberOfLines
         translatesAutoresizingMaskIntoConstraints = false
-        
-        let attributedText = NSMutableAttributedString(string: type, attributes: [
-            .font: UIFont.systemFont(ofSize: 16, weight: .bold)
-        ])
-        
-        attributedText.append(NSAttributedString(string: content, attributes: [
-            .font: UIFont.systemFont(ofSize: 16, weight: .regular)
-        ]))
-        
+        createAttributedText(type: type, content: content)
+    }
+    
+    private func createAttributedText(type: String, content: String) {
+        let attributedText = NSMutableAttributedString(
+            string: type,
+            attributes: [
+                .font: Constants.typeTextFont
+            ]
+        )
+        attributedText.append(
+            NSAttributedString(
+                string: content,
+                attributes: [
+                    .font: Constants.descriptionTextFont
+                ]
+            )
+        )
         self.attributedText = attributedText
-        
-        textColor = UIColor(
-            red: 134.0/255.0,
-            green: 59.0/255.0,
-            blue: 5.0/255.0,
-            alpha: 1
-        )
-    }
-    
-    override func drawText(in rect: CGRect) {
-        super.drawText(in: rect.inset(by: padding))
-    }
-    
-    override var intrinsicContentSize: CGSize {
-        let size = super.intrinsicContentSize
-        return CGSize(
-            width: size.width + padding.left + padding.right,
-            height: size.height + padding.top + padding.bottom
-        )
-    }
-    
-    override func sizeThatFits(_ size: CGSize) -> CGSize {
-        let size = super.sizeThatFits(size)
-        return CGSize(
-            width: size.width + padding.left + padding.right,
-            height: size.height + padding.top + padding.bottom
-        )
     }
 }

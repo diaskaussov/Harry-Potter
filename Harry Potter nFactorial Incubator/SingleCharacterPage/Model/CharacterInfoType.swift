@@ -1,7 +1,7 @@
 
 import UIKit
 
-enum CharacterInfoType {
+enum CharacterInfoType: CaseIterable {
     case name, species, gender,
          house, wizard, ancestry,
          wand, patronus, status, actor

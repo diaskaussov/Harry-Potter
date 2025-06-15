@@ -2,9 +2,12 @@
 import UIKit
 
 final class SingleCharacterBackgroundView: UIImageView {
+    private enum Constants {
+        static let backgroundImageName: String = "paper"
+    }
     
     init() {
-        super.init(image: UIImage(named: "paper") ?? UIImage())
+        super.init(image: UIImage(named: Constants.backgroundImageName) ?? UIImage())
         setupBackgroundView()
     }
     

@@ -22,6 +22,14 @@
 		B96645692DBEA4E300988F46 /* SingleCharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96645682DBEA4D500988F46 /* SingleCharacterBackgroundView.swift */; };
 		B96645702DBEAA5100988F46 /* RollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966456F2DBEAA4E00988F46 /* RollLabel.swift */; };
 		B9AF93442DF03A2700D1D368 /* HouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF93432DF03A1F00D1D368 /* HouseModel.swift */; };
+		B9D5C6602DFD8E5D005E67BB /* CharacterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C65F2DFD8E53005E67BB /* CharacterImageView.swift */; };
+		B9D5C6622DFD90A8005E67BB /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6612DFD909E005E67BB /* BackgroundImageView.swift */; };
+		B9D5C6662DFD9785005E67BB /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6652DFD9766005E67BB /* MainContentView.swift */; };
+		B9D5C66D2DFDC29C005E67BB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C66C2DFDC295005E67BB /* NetworkManager.swift */; };
+		B9D5C66F2DFDC376005E67BB /* SpellsPageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C66E2DFDC36A005E67BB /* SpellsPageManager.swift */; };
+		B9D5C6722DFDC418005E67BB /* SpellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6712DFDC415005E67BB /* SpellModel.swift */; };
+		B9D5C6742DFEC4DC005E67BB /* SpellsBackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6732DFEC4DC005E67BB /* SpellsBackgroundImageView.swift */; };
+		B9D5C6772DFEC653005E67BB /* SpellsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6762DFEC653005E67BB /* SpellsListView.swift */; };
 		B9DF2C422DBEE5CA00FAA517 /* CharactersSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF2C412DBEE5C300FAA517 /* CharactersSearchBar.swift */; };
 		B9DF2C442DBEE8D200FAA517 /* CharachtersPageBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF2C432DBEE8C200FAA517 /* CharachtersPageBackgroundView.swift */; };
 		B9DF2C472DBEE9F400FAA517 /* CellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */; };
@@ -65,6 +73,14 @@
 		B96645682DBEA4D500988F46 /* SingleCharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterBackgroundView.swift; sourceTree = "<group>"; };
 		B966456F2DBEAA4E00988F46 /* RollLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLabel.swift; sourceTree = "<group>"; };
 		B9AF93432DF03A1F00D1D368 /* HouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModel.swift; sourceTree = "<group>"; };
+		B9D5C65F2DFD8E53005E67BB /* CharacterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageView.swift; sourceTree = "<group>"; };
+		B9D5C6612DFD909E005E67BB /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		B9D5C6652DFD9766005E67BB /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		B9D5C66C2DFDC295005E67BB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B9D5C66E2DFDC36A005E67BB /* SpellsPageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsPageManager.swift; sourceTree = "<group>"; };
+		B9D5C6712DFDC415005E67BB /* SpellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellModel.swift; sourceTree = "<group>"; };
+		B9D5C6732DFEC4DC005E67BB /* SpellsBackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsBackgroundImageView.swift; sourceTree = "<group>"; };
+		B9D5C6762DFEC653005E67BB /* SpellsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsListView.swift; sourceTree = "<group>"; };
 		B9DF2C412DBEE5C300FAA517 /* CharactersSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSearchBar.swift; sourceTree = "<group>"; };
 		B9DF2C432DBEE8C200FAA517 /* CharachtersPageBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharachtersPageBackgroundView.swift; sourceTree = "<group>"; };
 		B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLabel.swift; sourceTree = "<group>"; };
@@ -167,11 +183,58 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B9D5C6632DFD9126005E67BB /* CellViews */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6612DFD909E005E67BB /* BackgroundImageView.swift */,
+				B9D5C65F2DFD8E53005E67BB /* CharacterImageView.swift */,
+				B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */,
+			);
+			path = CellViews;
+			sourceTree = "<group>";
+		};
+		B9D5C6642DFD96E3005E67BB /* SpellsPage */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6652DFD9766005E67BB /* MainContentView.swift */,
+				B9D5C6672DFDBF1B005E67BB /* Model */,
+				B9D5C6752DFEC4E7005E67BB /* View */,
+				B9D5C66B2DFDC08B005E67BB /* ViewModel */,
+			);
+			path = SpellsPage;
+			sourceTree = "<group>";
+		};
+		B9D5C6672DFDBF1B005E67BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6712DFDC415005E67BB /* SpellModel.swift */,
+				B9D5C66C2DFDC295005E67BB /* NetworkManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9D5C66B2DFDC08B005E67BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C66E2DFDC36A005E67BB /* SpellsPageManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B9D5C6752DFEC4E7005E67BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6762DFEC653005E67BB /* SpellsListView.swift */,
+				B9D5C6732DFEC4DC005E67BB /* SpellsBackgroundImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B9DF2C452DBEE9DC00FAA517 /* CustomCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */,
 				B9E87B4D2DBD9F9700366263 /* CustomCollectionViewCell.swift */,
+				B9D5C6632DFD9126005E67BB /* CellViews */,
 			);
 			path = CustomCollectionViewCell;
 			sourceTree = "<group>";
@@ -219,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E87B182DBD51DB00366263 /* MainPage */,
+				B9D5C6642DFD96E3005E67BB /* SpellsPage */,
 				B9AF933F2DEEDC3B00D1D368 /* HousesPage */,
 				B9E87B112DBD51DB00366263 /* IndividualSchoolPage */,
 				B9E87B402DBD7CD900366263 /* CharactersPage */,
@@ -286,10 +350,10 @@
 		B9E87B512DBDB6E300366263 /* SingleCharacterPage */ = {
 			isa = PBXGroup;
 			children = (
-				B9095F332DBF7DE8002D0249 /* Model */,
-				B966455A2DBE4AD400988F46 /* View */,
 				B96645582DBE47CD00988F46 /* SingleCharacterPresenter.swift */,
 				B9E87B522DBDB6FC00366263 /* SingleCharacterViewController.swift */,
+				B9095F332DBF7DE8002D0249 /* Model */,
+				B966455A2DBE4AD400988F46 /* View */,
 			);
 			path = SingleCharacterPage;
 			sourceTree = "<group>";
@@ -370,25 +434,32 @@
 			files = (
 				B966455E2DBE4BC200988F46 /* CharactersCollectionView.swift in Sources */,
 				B96645592DBE47DD00988F46 /* SingleCharacterPresenter.swift in Sources */,
+				B9D5C6662DFD9785005E67BB /* MainContentView.swift in Sources */,
 				B96645652DBE939A00988F46 /* SingleHouseBackgroundView.swift in Sources */,
 				B96645672DBE9CED00988F46 /* RollView.swift in Sources */,
 				B96645612DBE638100988F46 /* DescriptionLabel.swift in Sources */,
 				B9E87B262DBD51DB00366263 /* BackgroundView.swift in Sources */,
 				B9E87B422DBD7CF500366263 /* CharactersPageViewController.swift in Sources */,
 				B9E87B282DBD51DB00366263 /* MainPageImageView.swift in Sources */,
+				B9D5C6772DFEC653005E67BB /* SpellsListView.swift in Sources */,
 				B96645632DBE8B5400988F46 /* HousePageImageView.swift in Sources */,
 				B9E87B292DBD51DB00366263 /* WelcomeTextLabel.swift in Sources */,
+				B9D5C6602DFD8E5D005E67BB /* CharacterImageView.swift in Sources */,
+				B9D5C66D2DFDC29C005E67BB /* NetworkManager.swift in Sources */,
 				B9E87B2A2DBD51DB00366263 /* MainViewController.swift in Sources */,
+				B9D5C6622DFD90A8005E67BB /* BackgroundImageView.swift in Sources */,
 				B9E87B492DBD803D00366263 /* CharactersPagePresenter.swift in Sources */,
 				B9E87B472DBD7FED00366263 /* CharactersNetworkingService.swift in Sources */,
 				B9095F302DBF7915002D0249 /* CharacterInfoStackView.swift in Sources */,
 				B9E87B2B2DBD51DB00366263 /* FlagButton.swift in Sources */,
 				B9E87B2C2DBD51DB00366263 /* HousesPageViewController.swift in Sources */,
 				B9E87B4E2DBD9FA500366263 /* CustomCollectionViewCell.swift in Sources */,
+				B9D5C66F2DFDC376005E67BB /* SpellsPageManager.swift in Sources */,
 				B96645702DBEAA5100988F46 /* RollLabel.swift in Sources */,
 				B9095F372DBF7F70002D0249 /* CharacterInfoFormatter.swift in Sources */,
 				B96645692DBEA4E300988F46 /* SingleCharacterBackgroundView.swift in Sources */,
 				B9E87B2D2DBD51DB00366263 /* AppDelegate.swift in Sources */,
+				B9D5C6722DFDC418005E67BB /* SpellModel.swift in Sources */,
 				B9E87B442DBD7D7700366263 /* Characters.swift in Sources */,
 				B9DF2C442DBEE8D200FAA517 /* CharachtersPageBackgroundView.swift in Sources */,
 				B9095F352DBF7DFA002D0249 /* CharacterInfoType.swift in Sources */,
@@ -399,6 +470,7 @@
 				B9E87B2E2DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodeld in Sources */,
 				B9DF2C472DBEE9F400FAA517 /* CellLabel.swift in Sources */,
 				B966455C2DBE4AF800988F46 /* CharacterProfileImageView.swift in Sources */,
+				B9D5C6742DFEC4DC005E67BB /* SpellsBackgroundImageView.swift in Sources */,
 				B9E87B342DBD64B400366263 /* SingleHouseImageView.swift in Sources */,
 				B9AF93442DF03A2700D1D368 /* HouseModel.swift in Sources */,
 				B9E87B2F2DBD51DB00366263 /* SceneDelegate.swift in Sources */,

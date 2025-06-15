@@ -3,7 +3,7 @@ import UIKit
 
 struct CharacterInfoFormatter {
     
-    static func makeCharacterInfoMap(
+    static func createCharacterInfoMap(
         from character: IndividualCharacterInfo
     ) -> [CharacterInfoType: String] {
         

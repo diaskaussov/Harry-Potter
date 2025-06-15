@@ -2,6 +2,9 @@
 import UIKit
 
 final class CharacterInfoStackView: UIStackView {
+    private enum Constants {
+        static let spacing: CGFloat = 10
+    }
     
     init() {
         super.init(frame: .zero)
@@ -14,9 +17,9 @@ final class CharacterInfoStackView: UIStackView {
     
     private func setupStackProperties() {
         axis = .vertical
-        spacing = 10
-        distribution = .fillEqually
         alignment = .leading
+        spacing = Constants.spacing
+        distribution = .fillEqually
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

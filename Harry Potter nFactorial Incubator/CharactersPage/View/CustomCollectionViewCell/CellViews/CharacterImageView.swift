@@ -1,7 +1,7 @@
 
 import UIKit
 
-final class CharacterProfileImageView: UIImageView {
+final class CharacterImageView: UIImageView {
     private enum Constants {
         static let cornerRadius: CGFloat = 10
         static let borderWidth: CGFloat = 3
@@ -13,22 +13,20 @@ final class CharacterProfileImageView: UIImageView {
         ).cgColor
     }
     
-    init(image: UIImage) {
-        super.init(image: image)
-        setupProfileImageProperties()
+    init() {
+        super.init(frame: .zero)
+        setupImageViewProperties()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupProfileImageProperties() {
-        clipsToBounds = true
+    private func setupImageViewProperties() {
         layer.cornerRadius = Constants.cornerRadius
         layer.borderWidth = Constants.borderWidth
         layer.borderColor = Constants.borderColor
-        contentMode = .scaleToFill
-        isUserInteractionEnabled = true
+        clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

@@ -123,7 +123,7 @@ extension CharactersPageViewController: UICollectionViewDataSource, UICollection
         
         let vc = SingleCharacterViewController(
             character: selectedCharacter,
-            firstLetter: presenter.getHouseName()
+            house: self.house
         )
         navigationController?.present(vc, animated: true)
     }

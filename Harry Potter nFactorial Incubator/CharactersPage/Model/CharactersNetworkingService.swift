@@ -16,8 +16,7 @@ class CharactersNetworkingService {
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print(error)
+            if error != nil {
                 completion(nil)
                 return
             }

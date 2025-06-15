@@ -3,8 +3,6 @@ import UIKit
 
 final class WelcomeTextLabel: UILabel {
     private enum Constants {
-        static let text: String = 
-        "Welcome, traveler!\nAre you ready to dive into the world of Harry Potter?\nIf you are, click here!"
         static let numberOfLines: Int = 0
         static let cornerRadius: CGFloat = 10
         static let font = UIFont(name: "DancingScriptOT", size: 35)
@@ -16,17 +14,17 @@ final class WelcomeTextLabel: UILabel {
         )
     }
     
-    init() {
+    init(text: String) {
         super.init(frame: .zero)
-        setupLabelProperties()
+        setupLabelProperties(labelText: text)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupLabelProperties() {
-        text = Constants.text
+    private func setupLabelProperties(labelText: String) {
+        text = labelText
         textColor = Constants.textColor
         textAlignment = .center
         font = Constants.font

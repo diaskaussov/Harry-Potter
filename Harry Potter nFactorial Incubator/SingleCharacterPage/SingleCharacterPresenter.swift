@@ -3,19 +3,19 @@ import UIKit
 
 final class SingleCharacterPresenter {
     
-    private let singleCharacter: IndividualCharacterInfo
+    private let character: IndividualCharacterInfo
     private let house: HouseModel
     private let characterInfoType: [CharacterInfoType: String]
 
     
     init(character: IndividualCharacterInfo, house: HouseModel) {
-        self.singleCharacter = character
+        self.character = character
         self.house = house
-        self.characterInfoType = CharacterInfoFormatter.makeCharacterInfoMap(from: character)
+        self.characterInfoType = CharacterInfoFormatter.createCharacterInfoMap(from: character)
     }
     
     var characterImage: UIImage {
-        return singleCharacter.image ?? UIImage(named: house.name.lowercased()) ?? UIImage()
+        return character.image ?? UIImage(named: house.name.lowercased()) ?? UIImage()
     }
     
     func getInfo(for type: CharacterInfoType) -> String {
@@ -23,10 +23,6 @@ final class SingleCharacterPresenter {
     }
     
     func getAllInfoTypes() -> [CharacterInfoType] {
-        return [
-            .name, .species, .gender, .house,
-            .wizard, .ancestry, .wand, .patronus,
-            .status, .actor
-        ]
+        return CharacterInfoType.allCases
     }
 }

@@ -3,22 +3,19 @@ import UIKit
 
 final class SingleCharacterViewController: UIViewController {
     
-    private let closeButton: CloseButton
-    
     private let presenter: SingleCharacterPresenter
-    
-    private let infoStackView: CharacterInfoStackView
-    
-    private let profileImageView: CharacterProfileImageView
-    
-    private let backgroundView: SingleCharacterBackgroundView
-    
+    private let closeButton = CloseButton()
+    private let infoStackView = CharacterInfoStackView()
+    private let backgroundView = SingleCharacterBackgroundView()
     private let infoScrollView: UIScrollView = {
         let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
         return scroll
     }()
     
+    private lazy var profileImageView = CharacterProfileImageView(
+        image: presenter.characterImage
+    )
     private var infoLabels: [CharacterInfoType: DescriptionLabel] = [:]
     
     init(character: IndividualCharacterInfo, house: HouseModel) {
@@ -26,17 +23,6 @@ final class SingleCharacterViewController: UIViewController {
             character: character,
             house: house
         )
-        
-        self.profileImageView = CharacterProfileImageView(
-            image: presenter.getImage()
-        )
-        
-        self.infoStackView = CharacterInfoStackView()
-        
-        self.backgroundView = SingleCharacterBackgroundView()
-        
-        self.closeButton = CloseButton()
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,10 +33,9 @@ final class SingleCharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createInfoLabels()
-        
-        addSubviews()
+        setupSubviews()
         setupConstraints()
-        setDelegates()
+        configure()
     }
     
     private func createInfoLabels() {
@@ -68,7 +53,7 @@ final class SingleCharacterViewController: UIViewController {
 //MARK: - Setup View Controller
 
 private extension SingleCharacterViewController {
-    private func addSubviews() {
+    private func setupSubviews() {
         view.addSubview(backgroundView)
         backgroundView.addSubview(profileImageView)
         backgroundView.addSubview(infoScrollView)
@@ -111,7 +96,7 @@ private extension SingleCharacterViewController {
         ])
     }
     
-    private func setDelegates() {
+    private func configure() {
         closeButton.delegate = self
     }
 }
