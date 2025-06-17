@@ -17,7 +17,7 @@ struct MainContentView: View {
                 red: 214.0/255.0,
                 green: 187.0/255.0,
                 blue: 124.0/255.0,
-                alpha: 1
+                alpha: 1.0
             )
         )
     }
