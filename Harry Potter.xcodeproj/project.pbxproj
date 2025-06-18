@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9095F302DBF7915002D0249 /* CharacterInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9095F2F2DBF7907002D0249 /* CharacterInfoStackView.swift */; };
+		B9095F322DBF7988002D0249 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9095F312DBF797C002D0249 /* CloseButton.swift */; };
+		B9095F352DBF7DFA002D0249 /* CharacterInfoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9095F342DBF7DED002D0249 /* CharacterInfoType.swift */; };
+		B9095F372DBF7F70002D0249 /* CharacterInfoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9095F362DBF7F67002D0249 /* CharacterInfoFormatter.swift */; };
+		B9095F392DBF91F3002D0249 /* GreatVibes-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9095F382DBF91F3002D0249 /* GreatVibes-Regular.otf */; };
+		B96645592DBE47DD00988F46 /* SingleCharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96645582DBE47CD00988F46 /* SingleCharacterPresenter.swift */; };
+		B966455C2DBE4AF800988F46 /* CharacterProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966455B2DBE4AEA00988F46 /* CharacterProfileImageView.swift */; };
+		B966455E2DBE4BC200988F46 /* CharactersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966455D2DBE4BB300988F46 /* CharactersCollectionView.swift */; };
+		B96645612DBE638100988F46 /* DescriptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96645602DBE637A00988F46 /* DescriptionLabel.swift */; };
+		B96645632DBE8B5400988F46 /* HousePageImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96645622DBE8B3100988F46 /* HousePageImageView.swift */; };
+		B96645652DBE939A00988F46 /* SingleHouseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96645642DBE936100988F46 /* SingleHouseBackgroundView.swift */; };
+		B96645672DBE9CED00988F46 /* RollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96645662DBE9CE100988F46 /* RollView.swift */; };
+		B96645692DBEA4E300988F46 /* SingleCharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96645682DBEA4D500988F46 /* SingleCharacterBackgroundView.swift */; };
+		B96645702DBEAA5100988F46 /* RollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966456F2DBEAA4E00988F46 /* RollLabel.swift */; };
+		B9AF93442DF03A2700D1D368 /* HouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF93432DF03A1F00D1D368 /* HouseModel.swift */; };
+		B9D5C6602DFD8E5D005E67BB /* CharacterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C65F2DFD8E53005E67BB /* CharacterImageView.swift */; };
+		B9D5C6622DFD90A8005E67BB /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6612DFD909E005E67BB /* BackgroundImageView.swift */; };
+		B9D5C6662DFD9785005E67BB /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6652DFD9766005E67BB /* MainContentView.swift */; };
+		B9D5C66D2DFDC29C005E67BB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C66C2DFDC295005E67BB /* NetworkManager.swift */; };
+		B9D5C66F2DFDC376005E67BB /* SpellsPageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C66E2DFDC36A005E67BB /* SpellsPageManager.swift */; };
+		B9D5C6722DFDC418005E67BB /* SpellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6712DFDC415005E67BB /* SpellModel.swift */; };
+		B9D5C6742DFEC4DC005E67BB /* SpellsBackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6732DFEC4DC005E67BB /* SpellsBackgroundImageView.swift */; };
+		B9D5C6772DFEC653005E67BB /* SpellsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C6762DFEC653005E67BB /* SpellsListView.swift */; };
+		B9DF2C422DBEE5CA00FAA517 /* CharactersSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF2C412DBEE5C300FAA517 /* CharactersSearchBar.swift */; };
+		B9DF2C442DBEE8D200FAA517 /* CharachtersPageBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF2C432DBEE8C200FAA517 /* CharachtersPageBackgroundView.swift */; };
+		B9DF2C472DBEE9F400FAA517 /* CellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */; };
+		B9E87B242DBD51DB00366263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E87B1E2DBD51DB00366263 /* Assets.xcassets */; };
+		B9E87B262DBD51DB00366263 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B122DBD51DB00366263 /* BackgroundView.swift */; };
+		B9E87B282DBD51DB00366263 /* MainPageImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B142DBD51DB00366263 /* MainPageImageView.swift */; };
+		B9E87B292DBD51DB00366263 /* WelcomeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B152DBD51DB00366263 /* WelcomeTextLabel.swift */; };
+		B9E87B2A2DBD51DB00366263 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B172DBD51DB00366263 /* MainViewController.swift */; };
+		B9E87B2B2DBD51DB00366263 /* FlagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B192DBD51DB00366263 /* FlagButton.swift */; };
+		B9E87B2C2DBD51DB00366263 /* HousesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B1B2DBD51DB00366263 /* HousesPageViewController.swift */; };
+		B9E87B2D2DBD51DB00366263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B1D2DBD51DB00366263 /* AppDelegate.swift */; };
+		B9E87B2E2DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B1F2DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodeld */; };
+		B9E87B2F2DBD51DB00366263 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B212DBD51DB00366263 /* SceneDelegate.swift */; };
+		B9E87B312DBD521600366263 /* SingleHousePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B302DBD520C00366263 /* SingleHousePageViewController.swift */; };
+		B9E87B342DBD64B400366263 /* SingleHouseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B332DBD64AE00366263 /* SingleHouseImageView.swift */; };
+		B9E87B392DBD668500366263 /* HouseDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B382DBD668100366263 /* HouseDescription.swift */; };
+		B9E87B3B2DBD67E800366263 /* HouseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B3A2DBD67DC00366263 /* HouseLabel.swift */; };
+		B9E87B422DBD7CF500366263 /* CharactersPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B412DBD7CEE00366263 /* CharactersPageViewController.swift */; };
+		B9E87B442DBD7D7700366263 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B432DBD7D7500366263 /* Characters.swift */; };
+		B9E87B472DBD7FED00366263 /* CharactersNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B462DBD7FD000366263 /* CharactersNetworkingService.swift */; };
+		B9E87B492DBD803D00366263 /* CharactersPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B482DBD803600366263 /* CharactersPagePresenter.swift */; };
+		B9E87B4E2DBD9FA500366263 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B4D2DBD9F9700366263 /* CustomCollectionViewCell.swift */; };
+		B9E87B532DBDB70900366263 /* SingleCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E87B522DBDB6FC00366263 /* SingleCharacterViewController.swift */; };
+		B9F3725A2DBFB75200ABB582 /* DancingScript-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9F372582DBFB75200ABB582 /* DancingScript-Regular.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B9095F2F2DBF7907002D0249 /* CharacterInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoStackView.swift; sourceTree = "<group>"; };
+		B9095F312DBF797C002D0249 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		B9095F342DBF7DED002D0249 /* CharacterInfoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoType.swift; sourceTree = "<group>"; };
+		B9095F362DBF7F67002D0249 /* CharacterInfoFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoFormatter.swift; sourceTree = "<group>"; };
+		B9095F382DBF91F3002D0249 /* GreatVibes-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.otf"; sourceTree = "<group>"; };
+		B92340E52DBA6163008A8810 /* Harry Potter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Harry Potter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B96645582DBE47CD00988F46 /* SingleCharacterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterPresenter.swift; sourceTree = "<group>"; };
+		B966455B2DBE4AEA00988F46 /* CharacterProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProfileImageView.swift; sourceTree = "<group>"; };
+		B966455D2DBE4BB300988F46 /* CharactersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionView.swift; sourceTree = "<group>"; };
+		B96645602DBE637A00988F46 /* DescriptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionLabel.swift; sourceTree = "<group>"; };
+		B96645622DBE8B3100988F46 /* HousePageImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePageImageView.swift; sourceTree = "<group>"; };
+		B96645642DBE936100988F46 /* SingleHouseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseBackgroundView.swift; sourceTree = "<group>"; };
+		B96645662DBE9CE100988F46 /* RollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollView.swift; sourceTree = "<group>"; };
+		B96645682DBEA4D500988F46 /* SingleCharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterBackgroundView.swift; sourceTree = "<group>"; };
+		B966456F2DBEAA4E00988F46 /* RollLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLabel.swift; sourceTree = "<group>"; };
+		B9AF93432DF03A1F00D1D368 /* HouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModel.swift; sourceTree = "<group>"; };
+		B9D5C65F2DFD8E53005E67BB /* CharacterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageView.swift; sourceTree = "<group>"; };
+		B9D5C6612DFD909E005E67BB /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		B9D5C6652DFD9766005E67BB /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		B9D5C66C2DFDC295005E67BB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B9D5C66E2DFDC36A005E67BB /* SpellsPageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsPageManager.swift; sourceTree = "<group>"; };
+		B9D5C6712DFDC415005E67BB /* SpellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellModel.swift; sourceTree = "<group>"; };
+		B9D5C6732DFEC4DC005E67BB /* SpellsBackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsBackgroundImageView.swift; sourceTree = "<group>"; };
+		B9D5C6762DFEC653005E67BB /* SpellsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsListView.swift; sourceTree = "<group>"; };
+		B9DF2C412DBEE5C300FAA517 /* CharactersSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSearchBar.swift; sourceTree = "<group>"; };
+		B9DF2C432DBEE8C200FAA517 /* CharachtersPageBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharachtersPageBackgroundView.swift; sourceTree = "<group>"; };
+		B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLabel.swift; sourceTree = "<group>"; };
+		B9E87B122DBD51DB00366263 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		B9E87B142DBD51DB00366263 /* MainPageImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageImageView.swift; sourceTree = "<group>"; };
+		B9E87B152DBD51DB00366263 /* WelcomeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTextLabel.swift; sourceTree = "<group>"; };
+		B9E87B172DBD51DB00366263 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B9E87B192DBD51DB00366263 /* FlagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagButton.swift; sourceTree = "<group>"; };
+		B9E87B1B2DBD51DB00366263 /* HousesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesPageViewController.swift; sourceTree = "<group>"; };
+		B9E87B1D2DBD51DB00366263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9E87B1E2DBD51DB00366263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9E87B202DBD51DB00366263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9E87B212DBD51DB00366263 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B9E87B232DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Harry_Potter_nFactorial_Incubator.xcdatamodel; path = ../../Harry_Potter_nFactorial_Incubator.xcdatamodel; sourceTree = "<group>"; };
+		B9E87B302DBD520C00366263 /* SingleHousePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHousePageViewController.swift; sourceTree = "<group>"; };
+		B9E87B332DBD64AE00366263 /* SingleHouseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseImageView.swift; sourceTree = "<group>"; };
+		B9E87B382DBD668100366263 /* HouseDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDescription.swift; sourceTree = "<group>"; };
+		B9E87B3A2DBD67DC00366263 /* HouseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseLabel.swift; sourceTree = "<group>"; };
+		B9E87B412DBD7CEE00366263 /* CharactersPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPageViewController.swift; sourceTree = "<group>"; };
+		B9E87B432DBD7D7500366263 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		B9E87B462DBD7FD000366263 /* CharactersNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersNetworkingService.swift; sourceTree = "<group>"; };
+		B9E87B482DBD803600366263 /* CharactersPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPagePresenter.swift; sourceTree = "<group>"; };
+		B9E87B4D2DBD9F9700366263 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9E87B522DBDB6FC00366263 /* SingleCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterViewController.swift; sourceTree = "<group>"; };
+		B9F372582DBFB75200ABB582 /* DancingScript-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B92340E22DBA6163008A8810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9095F332DBF7DE8002D0249 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9095F362DBF7F67002D0249 /* CharacterInfoFormatter.swift */,
+				B9095F342DBF7DED002D0249 /* CharacterInfoType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B92340DC2DBA6163008A8810 = {
+			isa = PBXGroup;
+			children = (
+				B9E87B222DBD51DB00366263 /* Harry Potter */,
+				B92340E62DBA6163008A8810 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B92340E62DBA6163008A8810 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B92340E52DBA6163008A8810 /* Harry Potter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B966455A2DBE4AD400988F46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9095F312DBF797C002D0249 /* CloseButton.swift */,
+				B9095F2F2DBF7907002D0249 /* CharacterInfoStackView.swift */,
+				B96645682DBEA4D500988F46 /* SingleCharacterBackgroundView.swift */,
+				B96645602DBE637A00988F46 /* DescriptionLabel.swift */,
+				B966455B2DBE4AEA00988F46 /* CharacterProfileImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B96645712DBEAA7B00988F46 /* RollView */ = {
+			isa = PBXGroup;
+			children = (
+				B96645662DBE9CE100988F46 /* RollView.swift */,
+				B966456F2DBEAA4E00988F46 /* RollLabel.swift */,
+			);
+			path = RollView;
+			sourceTree = "<group>";
+		};
+		B9AF933F2DEEDC3B00D1D368 /* HousesPage */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B1B2DBD51DB00366263 /* HousesPageViewController.swift */,
+				B9AF93402DF039C900D1D368 /* Model */,
+				B9E87B1A2DBD51DB00366263 /* View */,
+			);
+			path = HousesPage;
+			sourceTree = "<group>";
+		};
+		B9AF93402DF039C900D1D368 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9AF93432DF03A1F00D1D368 /* HouseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9D5C6632DFD9126005E67BB /* CellViews */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6612DFD909E005E67BB /* BackgroundImageView.swift */,
+				B9D5C65F2DFD8E53005E67BB /* CharacterImageView.swift */,
+				B9DF2C462DBEE9EC00FAA517 /* CellLabel.swift */,
+			);
+			path = CellViews;
+			sourceTree = "<group>";
+		};
+		B9D5C6642DFD96E3005E67BB /* SpellsPage */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6652DFD9766005E67BB /* MainContentView.swift */,
+				B9D5C6672DFDBF1B005E67BB /* Model */,
+				B9D5C6752DFEC4E7005E67BB /* View */,
+				B9D5C66B2DFDC08B005E67BB /* ViewModel */,
+			);
+			path = SpellsPage;
+			sourceTree = "<group>";
+		};
+		B9D5C6672DFDBF1B005E67BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6712DFDC415005E67BB /* SpellModel.swift */,
+				B9D5C66C2DFDC295005E67BB /* NetworkManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9D5C66B2DFDC08B005E67BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C66E2DFDC36A005E67BB /* SpellsPageManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B9D5C6752DFEC4E7005E67BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9D5C6762DFEC653005E67BB /* SpellsListView.swift */,
+				B9D5C6732DFEC4DC005E67BB /* SpellsBackgroundImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9DF2C452DBEE9DC00FAA517 /* CustomCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B4D2DBD9F9700366263 /* CustomCollectionViewCell.swift */,
+				B9D5C6632DFD9126005E67BB /* CellViews */,
+			);
+			path = CustomCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		B9E87B112DBD51DB00366263 /* IndividualSchoolPage */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B302DBD520C00366263 /* SingleHousePageViewController.swift */,
+				B9E87B372DBD667D00366263 /* Model */,
+				B9E87B322DBD64A700366263 /* View */,
+			);
+			path = IndividualSchoolPage;
+			sourceTree = "<group>";
+		};
+		B9E87B162DBD51DB00366263 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B122DBD51DB00366263 /* BackgroundView.swift */,
+				B9E87B142DBD51DB00366263 /* MainPageImageView.swift */,
+				B9E87B152DBD51DB00366263 /* WelcomeTextLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9E87B182DBD51DB00366263 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B172DBD51DB00366263 /* MainViewController.swift */,
+				B9E87B162DBD51DB00366263 /* View */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		B9E87B1A2DBD51DB00366263 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B96645712DBEAA7B00988F46 /* RollView */,
+				B96645622DBE8B3100988F46 /* HousePageImageView.swift */,
+				B9E87B192DBD51DB00366263 /* FlagButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9E87B222DBD51DB00366263 /* Harry Potter */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B182DBD51DB00366263 /* MainPage */,
+				B9D5C6642DFD96E3005E67BB /* SpellsPage */,
+				B9AF933F2DEEDC3B00D1D368 /* HousesPage */,
+				B9E87B112DBD51DB00366263 /* IndividualSchoolPage */,
+				B9E87B402DBD7CD900366263 /* CharactersPage */,
+				B9E87B512DBDB6E300366263 /* SingleCharacterPage */,
+				B9E87B1D2DBD51DB00366263 /* AppDelegate.swift */,
+				B9E87B1E2DBD51DB00366263 /* Assets.xcassets */,
+				B9E87B1F2DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodeld */,
+				B9E87B202DBD51DB00366263 /* Info.plist */,
+				B9E87B212DBD51DB00366263 /* SceneDelegate.swift */,
+				B9095F382DBF91F3002D0249 /* GreatVibes-Regular.otf */,
+				B9F372582DBFB75200ABB582 /* DancingScript-Regular.otf */,
+			);
+			path = "Harry Potter";
+			sourceTree = "<group>";
+		};
+		B9E87B322DBD64A700366263 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B96645642DBE936100988F46 /* SingleHouseBackgroundView.swift */,
+				B9E87B3A2DBD67DC00366263 /* HouseLabel.swift */,
+				B9E87B332DBD64AE00366263 /* SingleHouseImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9E87B372DBD667D00366263 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B382DBD668100366263 /* HouseDescription.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9E87B402DBD7CD900366263 /* CharactersPage */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B412DBD7CEE00366263 /* CharactersPageViewController.swift */,
+				B9E87B482DBD803600366263 /* CharactersPagePresenter.swift */,
+				B9E87B452DBD7D7B00366263 /* Model */,
+				B9E87B4C2DBD9F8E00366263 /* View */,
+			);
+			path = CharactersPage;
+			sourceTree = "<group>";
+		};
+		B9E87B452DBD7D7B00366263 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9E87B432DBD7D7500366263 /* Characters.swift */,
+				B9E87B462DBD7FD000366263 /* CharactersNetworkingService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9E87B4C2DBD9F8E00366263 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9DF2C452DBEE9DC00FAA517 /* CustomCollectionViewCell */,
+				B9DF2C432DBEE8C200FAA517 /* CharachtersPageBackgroundView.swift */,
+				B9DF2C412DBEE5C300FAA517 /* CharactersSearchBar.swift */,
+				B966455D2DBE4BB300988F46 /* CharactersCollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9E87B512DBDB6E300366263 /* SingleCharacterPage */ = {
+			isa = PBXGroup;
+			children = (
+				B96645582DBE47CD00988F46 /* SingleCharacterPresenter.swift */,
+				B9E87B522DBDB6FC00366263 /* SingleCharacterViewController.swift */,
+				B9095F332DBF7DE8002D0249 /* Model */,
+				B966455A2DBE4AD400988F46 /* View */,
+			);
+			path = SingleCharacterPage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B92340E42DBA6163008A8810 /* Harry Potter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92340FB2DBA6164008A8810 /* Build configuration list for PBXNativeTarget "Harry Potter" */;
+			buildPhases = (
+				B92340E12DBA6163008A8810 /* Sources */,
+				B92340E22DBA6163008A8810 /* Frameworks */,
+				B92340E32DBA6163008A8810 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Harry Potter";
+			packageProductDependencies = (
+			);
+			productName = "Harry Potter Infactorial Incubator";
+			productReference = B92340E52DBA6163008A8810 /* Harry Potter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B92340DD2DBA6163008A8810 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					B92340E42DBA6163008A8810 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = B92340E02DBA6163008A8810 /* Build configuration list for PBXProject "Harry Potter" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B92340DC2DBA6163008A8810;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B92340E62DBA6163008A8810 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B92340E42DBA6163008A8810 /* Harry Potter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B92340E32DBA6163008A8810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9095F392DBF91F3002D0249 /* GreatVibes-Regular.otf in Resources */,
+				B9E87B242DBD51DB00366263 /* Assets.xcassets in Resources */,
+				B9F3725A2DBFB75200ABB582 /* DancingScript-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B92340E12DBA6163008A8810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B966455E2DBE4BC200988F46 /* CharactersCollectionView.swift in Sources */,
+				B96645592DBE47DD00988F46 /* SingleCharacterPresenter.swift in Sources */,
+				B9D5C6662DFD9785005E67BB /* MainContentView.swift in Sources */,
+				B96645652DBE939A00988F46 /* SingleHouseBackgroundView.swift in Sources */,
+				B96645672DBE9CED00988F46 /* RollView.swift in Sources */,
+				B96645612DBE638100988F46 /* DescriptionLabel.swift in Sources */,
+				B9E87B262DBD51DB00366263 /* BackgroundView.swift in Sources */,
+				B9E87B422DBD7CF500366263 /* CharactersPageViewController.swift in Sources */,
+				B9E87B282DBD51DB00366263 /* MainPageImageView.swift in Sources */,
+				B9D5C6772DFEC653005E67BB /* SpellsListView.swift in Sources */,
+				B96645632DBE8B5400988F46 /* HousePageImageView.swift in Sources */,
+				B9E87B292DBD51DB00366263 /* WelcomeTextLabel.swift in Sources */,
+				B9D5C6602DFD8E5D005E67BB /* CharacterImageView.swift in Sources */,
+				B9D5C66D2DFDC29C005E67BB /* NetworkManager.swift in Sources */,
+				B9E87B2A2DBD51DB00366263 /* MainViewController.swift in Sources */,
+				B9D5C6622DFD90A8005E67BB /* BackgroundImageView.swift in Sources */,
+				B9E87B492DBD803D00366263 /* CharactersPagePresenter.swift in Sources */,
+				B9E87B472DBD7FED00366263 /* CharactersNetworkingService.swift in Sources */,
+				B9095F302DBF7915002D0249 /* CharacterInfoStackView.swift in Sources */,
+				B9E87B2B2DBD51DB00366263 /* FlagButton.swift in Sources */,
+				B9E87B2C2DBD51DB00366263 /* HousesPageViewController.swift in Sources */,
+				B9E87B4E2DBD9FA500366263 /* CustomCollectionViewCell.swift in Sources */,
+				B9D5C66F2DFDC376005E67BB /* SpellsPageManager.swift in Sources */,
+				B96645702DBEAA5100988F46 /* RollLabel.swift in Sources */,
+				B9095F372DBF7F70002D0249 /* CharacterInfoFormatter.swift in Sources */,
+				B96645692DBEA4E300988F46 /* SingleCharacterBackgroundView.swift in Sources */,
+				B9E87B2D2DBD51DB00366263 /* AppDelegate.swift in Sources */,
+				B9D5C6722DFDC418005E67BB /* SpellModel.swift in Sources */,
+				B9E87B442DBD7D7700366263 /* Characters.swift in Sources */,
+				B9DF2C442DBEE8D200FAA517 /* CharachtersPageBackgroundView.swift in Sources */,
+				B9095F352DBF7DFA002D0249 /* CharacterInfoType.swift in Sources */,
+				B9E87B392DBD668500366263 /* HouseDescription.swift in Sources */,
+				B9095F322DBF7988002D0249 /* CloseButton.swift in Sources */,
+				B9E87B532DBDB70900366263 /* SingleCharacterViewController.swift in Sources */,
+				B9E87B312DBD521600366263 /* SingleHousePageViewController.swift in Sources */,
+				B9E87B2E2DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodeld in Sources */,
+				B9DF2C472DBEE9F400FAA517 /* CellLabel.swift in Sources */,
+				B966455C2DBE4AF800988F46 /* CharacterProfileImageView.swift in Sources */,
+				B9D5C6742DFEC4DC005E67BB /* SpellsBackgroundImageView.swift in Sources */,
+				B9E87B342DBD64B400366263 /* SingleHouseImageView.swift in Sources */,
+				B9AF93442DF03A2700D1D368 /* HouseModel.swift in Sources */,
+				B9E87B2F2DBD51DB00366263 /* SceneDelegate.swift in Sources */,
+				B9E87B3B2DBD67E800366263 /* HouseLabel.swift in Sources */,
+				B9DF2C422DBEE5CA00FAA517 /* CharactersSearchBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B92340FC2DBA6164008A8810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Harry Potter/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diaskaussov.Harry-Potter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B92340FD2DBA6164008A8810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Harry Potter/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diaskaussov.Harry-Potter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B92340FE2DBA6164008A8810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B92340FF2DBA6164008A8810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B92340E02DBA6163008A8810 /* Build configuration list for PBXProject "Harry Potter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92340FE2DBA6164008A8810 /* Debug */,
+				B92340FF2DBA6164008A8810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B92340FB2DBA6164008A8810 /* Build configuration list for PBXNativeTarget "Harry Potter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92340FC2DBA6164008A8810 /* Debug */,
+				B92340FD2DBA6164008A8810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B9E87B1F2DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9E87B232DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodel */,
+			);
+			currentVersion = B9E87B232DBD51DB00366263 /* Harry_Potter_nFactorial_Incubator.xcdatamodel */;
+			path = Harry_Potter_nFactorial_Incubator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B92340DD2DBA6163008A8810 /* Project object */;
+}
